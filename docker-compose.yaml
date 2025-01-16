@@ -7,6 +7,8 @@ services:
     depends_on:
       - db
       - phpmyadmin
+    volumes:
+      - php_code:/var/www/html 
 
   db:
     image: mariadb:latest
@@ -33,3 +35,4 @@ services:
 
 volumes:
   db_data:
+  php_code: 
